@@ -1,5 +1,5 @@
-##💸 FinAdvise – AI-Powered Personal Finance Assistant##
-FinAdvise is a LangGraph-based AI agent system designed to help users manage personal finance through intelligent conversations.
+**💸 FinAdvise – AI-Powered Personal Finance Assistant
+**FinAdvise is a LangGraph-based AI agent system designed to help users manage personal finance through intelligent conversations.
 
 🚀 Features
 
