@@ -1,111 +1,149 @@
-# FinAdvise - Personal Finance Assistant
-FinAdvise is a Streamlit-based AI-powered finance assistant designed to simplify personal finance management. It enables users to track expenses, access real-time stock information via the Alpha Vantage API, view budget summaries, and receive personalized financial advice through a conversational interface. Powered by LangGraph and the Groq API, FinAdvise maintains user context across sessions, provides empathetic and clear responses, and includes a Human-in-the-Loop (HITL) mechanism for high-risk queries.
-Features
+💸 FinAdvise – AI-Powered Personal Finance Assistant
+FinAdvise is a LangGraph-based AI agent system designed to help users manage personal finance through intelligent conversations.
 
-User Profile Collection: Gathers user details (age, income, goals, risk tolerance) for tailored responses.
-Real-Time Stock Data: Fetches stock prices using Alpha Vantage API with robust symbol extraction and error handling.
-Intent Detection: Classifies queries into profile updates, stock queries, expense tracking, budget summaries, or advice.
-Memory Management:
-Short-term memory for in-session context (e.g., previous intents).
-Long-term memory for cross-session continuity (e.g., past advice).
+🚀 Features
 
 
-Human-in-the-Loop (HITL): Flags high-risk queries (e.g., "liquidate retirement account") for simulated human review.
-Empathetic Responses: Uses clear, jargon-free language for users with limited financial literacy.
-Debugging: Includes logging to troubleshoot API issues.
-
-Prerequisites
-
-Python: Version 3.8 or higher.
-Virtual Environment: Recommended to isolate dependencies.
-API Keys:
-Groq API key (for LLM).
-Alpha Vantage API key (for stock data).
+🧠 Intent detection (profile, stock, budget, advice)
 
 
-
-Setup Instructions
-
-Clone the Repository (if applicable):
-git clone <repository-url>
-cd finadvise
+💾 Memory management (short-term & long-term)
 
 
-Create Virtual Environment:Create a virtual environment named env4:
-python3 -m venv env4
+📈 Real-time stock data via Alpha Vantage API
 
 
-Activate Virtual Environment:
-
-On macOS/Linux:source env4/bin/activate
+🤖 Personalized financial advice using LLM
 
 
-On Windows:env4\Scripts\activate
+⚠️ Human-in-the-Loop for high-risk queries
+
+
+💬 Interactive chat UI using Streamlit
 
 
 
+🧠 Architecture
+Built using LangGraph, enabling:
 
-Install Dependencies:Install required packages from requirements.txt:
+
+State-based workflows
+
+
+Multi-node AI pipelines
+
+
+Conditional execution
+
+
+Modular agent design
+
+
+
+🛠 Tech Stack
+
+
+Python
+
+
+LangGraph
+
+
+LangChain
+
+
+Groq (LLaMA 3 Model)
+
+
+Streamlit
+
+
+Alpha Vantage API
+
+
+dotenv
+
+
+
+📂 Project Structure
+finadvise/├── app.py├── requirements.txt├── .env├── README.md
+
+⚙️ Setup Instructions
+1. Clone Repo
+git clone <repo-url>cd finadvise
+2. Create Virtual Environment
+python -m venv envenv\Scripts\activate   (Windows)
+3. Install Dependencies
 pip install -r requirements.txt
-
-Contents of requirements.txt:
-streamlit>=1.30.0
-langchain>=0.1.14
-langchain_groq>=0.1.4
-langgraph>=0.0.35
-python-dotenv>=1.0.0
-requests>=2.31.0
-
-
-Set Up Environment Variables:Create a .env file in the project root with your API keys:
-GROQ_API_KEY=<your-groq-api-key>
-ALPHA_VANTAGE_API_KEY=<your-alpha-vantage-api-key>
-
-Example:
-GROQ_API_KEY=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
-ALPHA_VANTAGE_API_KEY=IG8T2GKRGV3DQSQ0
-
-
-Run the Application:Start the Streamlit app:
+4. Add API Keys (.env)
+GROQ_API_KEY=your_keyALPHA_VANTAGE_API_KEY=your_key
+5. Run App
 streamlit run app.py
 
-Access the app at http://localhost:8501 in your browser.
-
-Deactivate Virtual Environment (when done):
-deactivate
+💬 Example Queries
 
 
-
-Usage
-
-Interface: Use the chat-based UI to:
-Check stock prices (e.g., "What’s the price of AAPL stock?").
-Track expenses (e.g., "Add $50 for groceries").
-Request budget summaries (e.g., "Show my budget").
-Seek financial advice (e.g., "How should I save for a house?").
-Share profile details (e.g., "I’m 30 and earn $50,000").
+“What is AAPL stock price?”
 
 
-Example Prompt:What’s a good budget plan for someone my age who earns $50,000 a year and wants to save for a car?
+“Add $50 for groceries”
 
 
-High-Risk Queries: Queries like "Should I liquidate my retirement account?" trigger a simulated HITL response.
+“Show my budget”
 
-Project Structure
-finadvise/
-├── env4/                   # Virtual environment directory
-├── .env                    # Environment variables (API keys)
-├── app.py                  # Main Streamlit application
-├── requirements.txt        # Python dependencies
-├── README.md               # Project overview and setup
-├── FinAdvise_Documentation.md  # Detailed documentation
-└── .gitignore              # Excludes env4/, .env
 
-Notes:
-Stock Data: Uses Alpha Vantage API for real-time stock prices. Free tier limits to 5 calls/minute; monitor usage or upgrade for higher limits.
-Debugging: Check terminal logs for API response details or errors (e.g., rate limits, invalid symbols).
-Security: Store API keys in .env to avoid hardcoding.
-Troubleshooting:
-Verify API keys in .env.
-Ensure internet connectivity for Alpha Vantage API.
-Upgrade pip if dependency issues arise: python -m pip install --upgrade pip.
+“How should I save money?”
+
+
+
+⚠️ Notes
+
+
+Alpha Vantage free tier: 5 requests/minute
+
+
+HITL triggers for sensitive financial decisions
+
+
+Designed for educational/demo purposes
+
+
+
+📈 Future Improvements
+
+
+Multi-agent system (Planner + Executor)
+
+
+Portfolio optimization
+
+
+API integrations with financial platforms
+
+
+
+🤝 Connect
+Feel free to connect and collaborate on AI & Data Science projects.
+📖 Full Project Article
+
+👉 Read the detailed Medium blog explaining architecture, design, and workflow:
+https://medium.com/@Ifthiyaz_Ahamed/building-finadvise-an-ai-powered-personal-finance-assistant-using-langgraph-llms-3bacc92b379c
+
+🔗 Project Links
+💻 Source Code: https://github.com/ifthiyaz/finadvise-ai-agent](https://github.com/Ifthiyaz/FinAdviser-ai-agents
+📝 Medium Blog: https://medium.com/@Ifthiyaz_Ahamed/building-finadvise-an-ai-powered-personal-finance-assistant-using-langgraph-llms-3bacc92b379c
+🎥 LinkedIn: https://www.linkedin.com/in/ifthiyazahamed
+
+🤝 Connect With Me
+
+🔹 LinkedIn
+https://www.linkedin.com/in/ifthiyazahamed
+
+🔹 GitHub
+https://github.com/ifthiyaz
+
+🔹 Medium (Full Article)
+https://medium.com/@ifthiyaz
+
+🔹 Personal Website
+https://ifthiyaz.com
