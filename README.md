@@ -1,150 +1,148 @@
-**💸 FinAdvise – AI-Powered Personal Finance Assistant
-**
-FinAdvise is a LangGraph-based AI agent system designed to help users manage personal finance through intelligent conversations.
+# 💸 FinAdvise – AI-Powered Personal Finance Assistant
 
-🚀 Features
+FinAdvise is a **LangGraph-based AI agent system** designed to help users manage personal finance through intelligent conversations.
 
+---
 
-🧠 Intent detection (profile, stock, budget, advice)
+## 🚀 Features
 
+- 🧠 Intent detection (profile, stock, budget, advice)  
+- 💾 Memory management (short-term & long-term)  
+- 📈 Real-time stock data via Alpha Vantage API  
+- 🤖 Personalized financial advice using LLM  
+- ⚠️ Human-in-the-Loop (HITL) for high-risk queries  
+- 💬 Interactive chat UI using Streamlit  
 
-💾 Memory management (short-term & long-term)
+---
 
+## 🧠 Architecture
 
-📈 Real-time stock data via Alpha Vantage API
+Built using **LangGraph**, enabling:
 
+- State-based workflows  
+- Multi-node AI pipelines  
+- Conditional execution  
+- Modular agent design  
 
-🤖 Personalized financial advice using LLM
+---
 
+## 🛠 Tech Stack
 
-⚠️ Human-in-the-Loop for high-risk queries
+- Python  
+- LangGraph  
+- LangChain  
+- Groq (LLaMA 3 Model)  
+- Streamlit  
+- Alpha Vantage API  
+- python-dotenv  
 
+---
 
-💬 Interactive chat UI using Streamlit
+## 📂 Project Structure
 
+```bash
+finadvise/
+├── app.py
+├── requirements.txt
+├── .env
+├── README.md
+```
 
+---
 
-🧠 Architecture
-Built using LangGraph, enabling:
+## ⚙️ Setup Instructions
 
+### 1. Clone Repository
+```bash
+git clone https://github.com/Ifthiyaz/FinAdviser-ai-agents
+cd FinAdviser-ai-agents
+```
 
-State-based workflows
+### 2. Create Virtual Environment
+```bash
+python -m venv env
+env\Scripts\activate   # Windows
+# source env/bin/activate  # macOS/Linux
+```
 
-
-Multi-node AI pipelines
-
-
-Conditional execution
-
-
-Modular agent design
-
-
-
-🛠 Tech Stack
-
-
-Python
-
-
-LangGraph
-
-
-LangChain
-
-
-Groq (LLaMA 3 Model)
-
-
-Streamlit
-
-
-Alpha Vantage API
-
-
-dotenv
-
-
-
-📂 Project Structure
-finadvise/├── app.py├── requirements.txt├── .env├── README.md
-
-⚙️ Setup Instructions
-1. Clone Repo
-git clone <repo-url>cd finadvise
-2. Create Virtual Environment
-python -m venv envenv\Scripts\activate   (Windows)
-3. Install Dependencies
+### 3. Install Dependencies
+```bash
 pip install -r requirements.txt
-4. Add API Keys (.env)
-GROQ_API_KEY=your_keyALPHA_VANTAGE_API_KEY=your_key
-5. Run App
+```
+
+### 4. Add API Keys (.env)
+```env
+GROQ_API_KEY=your_key
+ALPHA_VANTAGE_API_KEY=your_key
+```
+
+### 5. Run Application
+```bash
 streamlit run app.py
+```
 
-💬 Example Queries
+---
 
+## 💬 Example Queries
 
-“What is AAPL stock price?”
+- “What is AAPL stock price?”  
+- “Add $50 for groceries”  
+- “Show my budget”  
+- “How should I save money?”  
 
+---
 
-“Add $50 for groceries”
+## ⚠️ Notes
 
+- Alpha Vantage free tier: 5 requests/minute  
+- HITL triggers for sensitive financial decisions  
+- Designed for educational/demo purposes  
 
-“Show my budget”
+---
 
+## 📈 Future Improvements
 
-“How should I save money?”
+- Multi-agent system (Planner + Executor)  
+- Portfolio optimization  
+- Integration with financial APIs  
 
+---
 
+## 📖 Full Project Article
 
-⚠️ Notes
-
-
-Alpha Vantage free tier: 5 requests/minute
-
-
-HITL triggers for sensitive financial decisions
-
-
-Designed for educational/demo purposes
-
-
-
-📈 Future Improvements
-
-
-Multi-agent system (Planner + Executor)
-
-
-Portfolio optimization
-
-
-API integrations with financial platforms
-
-
-
-🤝 Connect
-Feel free to connect and collaborate on AI & Data Science projects.
-📖 Full Project Article
-
-👉 Read the detailed Medium blog explaining architecture, design, and workflow:
+👉 Read the detailed Medium blog:  
 https://medium.com/@Ifthiyaz_Ahamed/building-finadvise-an-ai-powered-personal-finance-assistant-using-langgraph-llms-3bacc92b379c
 
-🔗 Project Links
-💻 Source Code: https://github.com/ifthiyaz/finadvise-ai-agent](https://github.com/Ifthiyaz/FinAdviser-ai-agents
-📝 Medium Blog: https://medium.com/@Ifthiyaz_Ahamed/building-finadvise-an-ai-powered-personal-finance-assistant-using-langgraph-llms-3bacc92b379c
-🎥 LinkedIn: https://www.linkedin.com/in/ifthiyazahamed
+---
 
-🤝 Connect With Me
+## 🔗 Project Links
 
-🔹 LinkedIn
-https://www.linkedin.com/in/ifthiyazahamed
+- 💻 Source Code: https://github.com/Ifthiyaz/FinAdviser-ai-agents  
+- 📝 Medium Blog: https://medium.com/@Ifthiyaz_Ahamed/building-finadvise-an-ai-powered-personal-finance-assistant-using-langgraph-llms-3bacc92b379c  
+- 🎥 LinkedIn: https://www.linkedin.com/in/ifthiyazahamed  
 
-🔹 GitHub
-https://github.com/ifthiyaz
+---
 
-🔹 Medium (Full Article)
-https://medium.com/@ifthiyaz
+## 🤝 Connect With Me
 
-🔹 Personal Website
-https://ifthiyaz.com
+🔹 LinkedIn  
+https://www.linkedin.com/in/ifthiyazahamed  
+
+🔹 GitHub  
+https://github.com/ifthiyaz  
+
+🔹 Medium  
+https://medium.com/@ifthiyaz  
+
+🔹 Personal Website  
+https://ifthiyaz.com  
+
+---
+
+## ⭐ Support
+
+If you found this project useful:
+
+- ⭐ Star the repo  
+- 🔁 Share on LinkedIn  
+- 🤝 Connect for collaboration  
