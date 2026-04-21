@@ -132,8 +132,7 @@ https://www.linkedin.com/in/ifthiyazahamed
 https://github.com/ifthiyaz  
 
 🔹 Medium  
-https://medium.com/@ifthiyaz  
-
+https://medium.com/@Ifthiyaz_Ahamed
 🔹 Personal Website  
 https://ifthiyaz.com  
 
